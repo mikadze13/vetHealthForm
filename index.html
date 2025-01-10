@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Prescription Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9fc;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 9px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            color: #007B8F;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .form-header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .form-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 100%;
+            margin-bottom: 5px;
+            color: rgba(0, 0, 0, 0.559);
+            font-weight: bold;
+        }
+
+        .form-group .input-row {
+            display: flex;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .form-group .input-row input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.559);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer button {
+            padding: 10px 20px;
+            background-color: #007B8F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-footer button:hover {
+            background-color: #005f6e;
+        }
+
+        .hint-text {
+            font-size: 12px;
+            color: #999;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h3 style="margin-top: 5px;text-align: left; color: rgba(0, 0, 0, 0.559);">ვეტერინარული კლინიკა-ვეტ ჰელსი
+                <br>
+                მის: გლდანი,ომარ ხიზანიშვილის 41<br>
+                ტელ: 555 510 008</h3>
+            <img src="/vethealth.jpeg" alt="Pet Image" style="width: 150px; height: 150px;">
+        </div>
+        <form>
+            <!-- Pet Owner Name -->
+            <div class="form-group">
+                <div class="input-row">
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="first-name"> სახელი</label>
+                        <input type="text" id="first-name">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="last-name">გვარი</label>
+                        <input type="text" id="last-name">
+                    </div>
+
+                </div>
+            </div>
+            <!-- Email and Phone -->
+            <div class="form-group">
+                <div class="input-row">
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="email">ელ.ფოსტა</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="phone">ტელეფონის ნომერი</label>
+                        <input type="tel" id="phone">
+                    </div>
+                </div>
+            </div>
+            <!-- Pet's Name -->
+            <div class="form-group">
+                <div class="input-row">
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="pet-name">ცხოველის სახელი</label>
+                        <input type="text" id="pet-name" style="flex: 1;
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.559);
+                border-radius: 5px;
+                font-size: 14px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="pet-age">ცხოველის ასაკი</label>
+                        <input type="text" id="pet-age" style="flex: 1;
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.559);
+                border-radius: 5px;
+                font-size: 14px;">
+                    </div>
+                </div>
+            </div>
+            <!-- Pet's Weight, Species, Breed -->
+            <div class="form-group">
+                <div class="input-row">
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="weight">წონა</label>
+                        <input type="text" id="weight" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="species">სახეობა</label>
+                        <input type="text" id="species" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex: 1;">
+                        <label for="breed">ჯიში</label>
+                        <input type="text" id="breed" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <label for="owner-name">სქესი</label>
+                <div class="input-row">
+                    <div style="display: flex; align-items: center;  flex: 1;">
+                        <input type="radio" name="sex" value="male" id="male" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                        <label for="male" style="margin-bottom: 0px;">ხვადი</label>
+
+                    </div>
+                    <div style="display: flex; align-items: center;  flex: 1;">
+                        <input type="radio" name="sex" value="female" id="female" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                        <label for="female" style="margin-bottom: 0px;">ძუ</label>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="owner-name">დანიშნულება</label>
+                <div class="input-row">
+                    <div style="display: flex; align-items: center;  flex: 1;">
+                        <textarea rows="13" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;" id="textarea">
+
+                        </textarea>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-row"  >
+                    <div style="display: flex; flex-direction: column; ">
+                        <label for="Veterinary">ვეტერინარი</label>
+                        <input type="text" id="Veterinary" style="flex: 1;
+                        padding: 10px;
+                        border: 1px solid rgba(0, 0, 0, 0.559);
+                        border-radius: 5px;
+                        font-size: 14px;">
+                    </div> 
+                    <div style="display: flex;align-items: flex-end;">
+                        <input type="date" id="datetime">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Submit -->
+            <div class="form-footer">
+                <button type="button" onclick="printForm()">ამობეჭდვა</button>
+            </div>
+        </form>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
